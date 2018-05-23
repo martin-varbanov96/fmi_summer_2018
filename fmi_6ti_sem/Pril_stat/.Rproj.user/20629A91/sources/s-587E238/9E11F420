@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1519810072691.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9E11F420",
+    "lastKnownWriteTime" : 1519810100,
+    "last_content_update" : 1519811100689,
+    "path" : "~/Documents/fmi/fmi_6ti_sem/Pril_stat/20180228/01.R",
+    "project_path" : "20180228/01.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1524041602466.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "795B31EA",
+    "lastKnownWriteTime" : 14,
+    "last_content_update" : 1524041602466,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "FFC802B1",
+        "caption" : "corTable",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=corTable&cache_key=FFC802B1",
+        "displayedObservations" : 11,
+        "environment" : "",
+        "object" : "corTable",
+        "preview" : 0,
+        "totalObservations" : 11,
+        "variables" : 11
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

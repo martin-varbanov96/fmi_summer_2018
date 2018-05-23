@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1521624388297.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "6BAFAAA7",
+    "lastKnownWriteTime" : 209,
+    "last_content_update" : 1521624388297,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "B42BF3CF",
+        "caption" : "water",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=water&cache_key=B42BF3CF",
+        "displayedObservations" : "61",
+        "environment" : "",
+        "object" : "water",
+        "preview" : "0",
+        "totalObservations" : "61",
+        "variables" : "4"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

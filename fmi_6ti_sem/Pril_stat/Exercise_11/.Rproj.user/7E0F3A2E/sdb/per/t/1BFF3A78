@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "rm(list=ls())                ######### APPLIED STATISTICS -> EXERCISE 11 #######\n\n                                                ### ANOVA ###\ninstall.packages(\"HSAUR\")\ndata(foster, package = \"HSAUR\")\n??foster\nstr(foster)\nedit(foster)\ntable(foster$litgen,foster$motgen) #unbalanced\ntapply(foster$weight, foster$litgen, mean)\ntapply(foster$weight, foster$motgen, mean)\ntapply(foster$weight, list(foster$litgen,foster$motgen), mean)\ntapply(foster$weight, foster$litgen, sd)\ntapply(foster$weight, foster$motgen, sd)\ntapply(foster$weight, foster$litgen, shapiro.test)\ntapply(foster$weight, foster$motgen, shapiro.test)\nplot.design(foster)\n\n                                          ### Bartlett Test ###\nbartlett.test(weight ~ litgen,data = foster)\nbartlett.test(weight ~ motgen,data = foster)\n\n                                          ### One-way ANOVA ###\noneway.test(weight ~ litgen,data=foster,var.equal = TRUE)\noneway.test(weight ~ litgen,data=foster,var.equal = FALSE)\noneway.test(weight ~ motgen,data=foster,var.equal = TRUE)\noneway.test(weight ~ motgen,data=foster,var.equal = FALSE)\n\nanova(lm(weight~motgen,data=foster))\n\nw_aov<-aov(weight ~ motgen,data = foster)\nsummary(w_aov)\nstr(w_aov)\ncoefficients(w_aov)\nresiduals(w_aov)\nw_aov$contrasts\nmean(foster$weight)\noptions(\"contrasts\")\nw_aov_sum<-aov(weight ~ motgen,data = foster,contrasts = list(motgen=contr.sum))\ncoef(w_aov_sum)\n\n                                      ### Kruskal-Wallis Rank Sum Test ###\nkruskal.test(weight ~ motgen,data = foster)\nkruskal.test(weight ~ litgen,data = foster)\n\n                                        ### Two-way ANOVA ###\ndata(\"weightgain\", package = \"HSAUR\")\n??weightgain\nstr(weightgain)\nedit(weightgain)\ntable(weightgain$source,weightgain$type) # balanced\ntapply(weightgain$weightgain, list(weightgain$source,weightgain$type), mean)\ntapply(weightgain$weightgain, weightgain$source, shapiro.test)\ntapply(weightgain$weightgain, weightgain$type, shapiro.test)\nnt=tapply(weightgain$weightgain, list(weightgain$source,weightgain$type), shapiro.test)\nnt[1,1];nt[1,2];nt[2,1];nt[2,2]\ntapply(weightgain$weightgain, list(weightgain$source,weightgain$type), sd)\nplot(weightgain)\nplot.design(weightgain)\ninteraction.plot(weightgain$type, weightgain$source,weightgain$weightgain)\nwg_aov <- aov(weightgain ~ source * type, data = weightgain)\n# wg_aov <- aov(weightgain ~ source + type+source:type, data = weightgain)\nsummary(wg_aov)\ncoef(wg_aov)\ncoef(aov(weightgain ~ source + type + source:type,\n         data = weightgain, contrasts = list(source = contr.sum)))\n\n                                         ### MANOVA ###\ndata(\"skulls\", package = \"HSAUR\")\nmeans <- aggregate(skulls[, c(\"mb\", \"bh\", \"bl\", \"nh\")], list(epoch = skulls$epoch), mean)\nmeans\nplot.design(skulls)\nplot(skulls)\n\nskulls_manova <- manova(cbind(mb, bh, bl, nh) ~ epoch, data = skulls)\nsummary(skulls_manova, test = \"Pillai\")\nsummary(skulls_manova, test = \"Wilks\")\nsummary(skulls_manova, test = \"Hotelling-Lawley\")\nsummary(skulls_manova, test = \"Roy\")\nsummary.aov(manova(cbind(mb, bh, bl, nh) ~ epoch, data = skulls))\n",
+    "created" : 1525845337676.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1412712810",
+    "id" : "1BFF3A78",
+    "lastKnownWriteTime" : 1525845452,
+    "last_content_update" : 1525845452300,
+    "path" : "C:/Stuffs/books/Acer_math/PS/Exercise_11/Script_exercise_11.R",
+    "project_path" : "Script_exercise_11.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

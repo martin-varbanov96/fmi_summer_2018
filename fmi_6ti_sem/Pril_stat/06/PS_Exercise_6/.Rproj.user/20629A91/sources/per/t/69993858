@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522230954427.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "69993858",
+    "lastKnownWriteTime" : 1522230733,
+    "last_content_update" : 1522230954427,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "EF927555",
+        "caption" : "thuesen",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=thuesen&cache_key=EF927555",
+        "displayedObservations" : 24,
+        "environment" : "",
+        "object" : "thuesen",
+        "preview" : 0,
+        "totalObservations" : 24,
+        "variables" : 2
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

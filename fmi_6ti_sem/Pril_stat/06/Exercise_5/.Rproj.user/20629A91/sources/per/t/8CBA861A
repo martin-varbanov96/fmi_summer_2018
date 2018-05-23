@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1522225246942.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "558888582",
+    "id" : "8CBA861A",
+    "lastKnownWriteTime" : 1521638232,
+    "last_content_update" : 1521638232,
+    "path" : "~/Documents/fmi/fmi_6ti_sem/Pril_stat/06/Exercise_5/Script_exercise_5.R",
+    "project_path" : "Script_exercise_5.R",
+    "properties" : {
+        "cursorPosition" : "93,30",
+        "scrollLine" : "78"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
