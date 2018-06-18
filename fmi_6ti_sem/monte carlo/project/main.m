@@ -36,20 +36,20 @@ err_total_basic_monte_carlo = []
 for i = 1:length(number_points)
 
   # computation r integral
-  int_r_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_r(x), r_from, r_to, number_points(i))
-  err_r_basic_monte_carlo(i) = abs(real_result_r - int_r_basic_monte_carlo(i))
+  int_r_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_r(x), r_from, r_to, number_points(i));
+  err_r_basic_monte_carlo(i) = abs(real_result_r - int_r_basic_monte_carlo(i));
   
   # computation theta integral
-  int_theta_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_theta(x), theta_from, theta_to, number_points(i))
-  err_theta_basic_monte_carlo(i) = abs(real_result_theta - int_theta_basic_monte_carlo(i))
+  int_theta_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_theta(x), theta_from, theta_to, number_points(i));
+  err_theta_basic_monte_carlo(i) = abs(real_result_theta - int_theta_basic_monte_carlo(i));
 
   # computing psi integral
-  int_psi_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_psi(x), psi_from, psi_to, number_points(i))
-  err_psi_basic_monte_carlo(i) = abs(real_result_psi - int_psi_basic_monte_carlo(i))
+  int_psi_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_psi(x), psi_from, psi_to, number_points(i));
+  err_psi_basic_monte_carlo(i) = abs(real_result_psi - int_psi_basic_monte_carlo(i));
 
   # computing total integral
-  int_total_basic_monte_carlo(i) = int_r_basic_monte_carlo(i)*int_theta_basic_monte_carlo(i)*int_psi_basic_monte_carlo(i)
-  err_total_basic_monte_carlo(i) = abs(real_result_total-int_total_basic_monte_carlo(i))
+  int_total_basic_monte_carlo(i) = int_r_basic_monte_carlo(i)*int_theta_basic_monte_carlo(i)*int_psi_basic_monte_carlo(i);
+  err_total_basic_monte_carlo(i) = abs(real_result_total-int_total_basic_monte_carlo(i));
 
 end
 
@@ -67,20 +67,20 @@ err_total_basic_monte_carlo = []
 for i = 1:length(number_points)
 
   # computation r integral
-  int_r_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_r(x), r_from, r_to, number_points(i))
-  err_r_basic_monte_carlo(i) = abs(real_result_r - int_r_basic_monte_carlo(i))
+  int_r_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_r(x), r_from, r_to, number_points(i));
+  err_r_basic_monte_carlo(i) = abs(real_result_r - int_r_basic_monte_carlo(i));
   
   # computation theta integral
-  int_theta_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_theta(x), theta_from, theta_to, number_points(i))
-  err_theta_basic_monte_carlo(i) = abs(real_result_theta - int_theta_basic_monte_carlo(i))
+  int_theta_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_theta(x), theta_from, theta_to, number_points(i));
+  err_theta_basic_monte_carlo(i) = abs(real_result_theta - int_theta_basic_monte_carlo(i));
 
   # computing psi integral
-  int_psi_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_psi(x), psi_from, psi_to, number_points(i))
-  err_psi_basic_monte_carlo(i) = abs(real_result_psi - int_psi_basic_monte_carlo(i))
+  int_psi_basic_monte_carlo(i) = monte_carlo_basic(@(x) func_psi(x), psi_from, psi_to, number_points(i));
+  err_psi_basic_monte_carlo(i) = abs(real_result_psi - int_psi_basic_monte_carlo(i));
 
   # computing total integral
-  int_total_basic_monte_carlo(i) = int_r_basic_monte_carlo(i)*int_theta_basic_monte_carlo(i)*int_psi_basic_monte_carlo(i)
-  err_total_basic_monte_carlo(i) = abs(real_result_total-int_total_basic_monte_carlo(i))
+  int_total_basic_monte_carlo(i) = int_r_basic_monte_carlo(i)*int_theta_basic_monte_carlo(i)*int_psi_basic_monte_carlo(i);
+  err_total_basic_monte_carlo(i) = abs(real_result_total-int_total_basic_monte_carlo(i));
 
 end
 
@@ -96,53 +96,22 @@ err_total_qucu_monte_carlo = []
 for i = 1:length(number_points)
 
   # computation r integral
-  int_r_qucu_monte_carlo(i) = qucu(@(x) func_r(x), r_from, r_to, number_points(i))
-  err_r_qucu_monte_carlo(i) = abs(real_result_r - int_r_qucu_monte_carlo(i))
+  int_r_qucu_monte_carlo(i) = qucu(@(x) func_r(x), r_from, r_to, number_points(i));
+  err_r_qucu_monte_carlo(i) = abs(real_result_r - int_r_qucu_monte_carlo(i));
   
   # computation theta integral
-  int_theta_qucu_monte_carlo(i) = qucu(@(x) func_theta(x), theta_from, theta_to, number_points(i))
-  err_theta_qucu_monte_carlo(i) = abs(real_result_theta - int_theta_qucu_monte_carlo(i))
+  int_theta_qucu_monte_carlo(i) = qucu(@(x) func_theta(x), theta_from, theta_to, number_points(i));
+  err_theta_qucu_monte_carlo(i) = abs(real_result_theta - int_theta_qucu_monte_carlo(i));
 
   # computing psi integral
-  int_psi_qucu_monte_carlo(i) = qucu(@(x) func_psi(x), psi_from, psi_to, number_points(i))
-  err_psi_qucu_monte_carlo(i) = abs(real_result_psi - int_psi_qucu_monte_carlo(i))
+  int_psi_qucu_monte_carlo(i) = qucu(@(x) func_psi(x), psi_from, psi_to, number_points(i));
+  err_psi_qucu_monte_carlo(i) = abs(real_result_psi - int_psi_qucu_monte_carlo(i));
 
   # computing total integral
-  int_total_qucu_monte_carlo(i) = int_r_qucu_monte_carlo(i)*int_theta_qucu_monte_carlo(i)*int_psi_qucu_monte_carlo(i)
-  err_total_qucu_monte_carlo(i) = abs(real_result_total-int_total_qucu_monte_carlo(i))
+  int_total_qucu_monte_carlo(i) = int_r_qucu_monte_carlo(i)*int_theta_qucu_monte_carlo(i)*int_psi_qucu_monte_carlo(i);
+  err_total_qucu_monte_carlo(i) = abs(real_result_total-int_total_qucu_monte_carlo(i));
 end
 
-# TODO:: Symetric method
-#Computing monte carlo with quasy random numbers
-int_r_symmetric_monte_carlo = []
-err_r_symmetric_monte_carlo = []
-int_theta_symmetric_monte_carlo = []
-err_theta_symmetric_monte_carlo = []
-int_psi_symmetric_monte_carlo = []
-err_psi_symmetric_monte_carlo = []
-int_total_symmetric_monte_carlo = []
-err_total_symmetric_monte_carlo = []
-for i = 1:length(number_points)
-
-  # computation r integral
-  int_r_symmetric_monte_carlo(i) = symmetric(@(x) func_r(x), r_from, r_to, number_points(i))
-  err_r_qucu_monte_carlo(i) = abs(real_result_r - int_r_qucu_monte_carlo(i))
-  
-  # computation theta integral
-  int_theta_qucu_monte_carlo(i) = qucu(@(x) func_theta(x), theta_from, theta_to, number_points(i))
-  err_theta_qucu_monte_carlo(i) = abs(real_result_theta - int_theta_qucu_monte_carlo(i))
-
-  # computing psi integral
-  int_psi_qucu_monte_carlo(i) = qucu(@(x) func_psi(x), psi_from, psi_to, number_points(i))
-  err_psi_qucu_monte_carlo(i) = abs(real_result_psi - int_psi_qucu_monte_carlo(i))
-
-  # computing total integral
-  int_total_qucu_monte_carlo(i) = int_r_qucu_monte_carlo(i)*int_theta_qucu_monte_carlo(i)*int_psi_qucu_monte_carlo(i)
-  err_total_qucu_monte_carlo(i) = abs(real_result_total-int_total_qucu_monte_carlo(i))
-
-end
-
-# FIX SYMMETRIC COMPUTATIONS
 # symmetric monte carlo computations
 int_r_symmetric_monte_carlo = []
 err_r_symmetric_monte_carlo = []
@@ -155,31 +124,32 @@ err_total_symmetric_monte_carlo = []
 for i = 1:length(number_points)
 
   # computation r integral
-  int_r_symmetric_monte_carlo(i) = monte_carlo_symmetric(@(x) func_r(x), r_from, r_to, number_points(i))
-  err_r_symmetric_monte_carlo(i) = abs(real_result_r - int_r_symmetric_monte_carlo(i))
+  int_r_symmetric_monte_carlo(i) = symmetric_mcm(@(x) func_r(x), r_from, r_to, number_points(i));
+  err_r_symmetric_monte_carlo(i) = abs(real_result_r - int_r_symmetric_monte_carlo(i));
   
   # computation theta integral
-  int_theta_symmetric_monte_carlo(i) = monte_carlo_symmetric(@(x) func_theta(x), theta_from, theta_to, number_points(i))
-  err_theta_symmetric_monte_carlo(i) = abs(real_result_theta - int_theta_symmetric_monte_carlo(i))
+  int_theta_symmetric_monte_carlo(i) = symmetric_mcm(@(x) func_theta(x), theta_from, theta_to, number_points(i));
+  err_theta_symmetric_monte_carlo(i) = abs(real_result_theta - int_theta_symmetric_monte_carlo(i));
 
   # computing psi integral
-  int_psi_symmetric_monte_carlo(i) = monte_carlo_symmetric(@(x) func_psi(x), psi_from, psi_to, number_points(i))
-  err_psi_symmetric_monte_carlo(i) = abs(real_result_psi - int_psi_symmetric_monte_carlo(i))
+  int_psi_symmetric_monte_carlo(i) = symmetric_mcm(@(x) func_psi(x), psi_from, psi_to, number_points(i));
+  err_psi_symmetric_monte_carlo(i) = abs(real_result_psi - int_psi_symmetric_monte_carlo(i));
 
   # computing total integral
-  int_total_symmetric_monte_carlo(i) = int_r_symmetric_monte_carlo(i)*int_theta_symmetric_monte_carlo(i)*int_psi_symmetric_monte_carlo(i)
-  err_total_symmetric_monte_carlo(i) = abs(real_result_total-int_total_symmetric_monte_carlo(i))
+  int_total_symmetric_monte_carlo(i) = int_r_symmetric_monte_carlo(i)*int_theta_symmetric_monte_carlo(i)*int_psi_symmetric_monte_carlo(i);
+  err_total_symmetric_monte_carlo(i) = abs(real_result_total-int_total_symmetric_monte_carlo(i));
 
 end
 
 
-axis_size = [100, 10000, 0, 0.5]
+axis_size = [100, 10000, 0, 0.05]
 plot(number_points, err_total_basic_monte_carlo, 'r')
 axis(axis_size)
 hold on
 plot(number_points, err_total_qucu_monte_carlo, 'g')
 hold on
 plot(number_points, err_total_symmetric_monte_carlo, 'b')
-legend("monte carlo basic", "qucu monte carlo")
+legend("monte carlo basic", "quasi monte carlo", "symmetric monte carlo")
 xlabel("Num of points")
 ylabel("Error of algorithm")
+print -djpg 03_basic_result.jpg
