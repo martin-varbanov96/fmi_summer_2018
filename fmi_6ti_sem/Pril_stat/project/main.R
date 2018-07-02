@@ -39,7 +39,7 @@ true_results = test$result
 # results
 table(naive_results,true_results)
 
-##################### PCA ####################
+##################### FULL PCA ####################
 
 # input data converted to PCA
 get_pca <- function(input_data){
@@ -110,7 +110,7 @@ summary(full_pca_princomp)
 loading_scores <- full_pca_train$rotation[,1]
 sensor_scores <- abs(loading_scores) ## get the magnitudes
 sensor_score_ranked <- sort(sensor_scores, decreasing=TRUE)
-top_10_sensors <- names(gene_score_ranked[1:10])
+top_10_sensors <- names(sensor_score_ranked[1:10])
 
 top_10_sensors ## show the names of the top 10 genes
 
@@ -132,21 +132,56 @@ true_results = test$result
 # results
 table(full_magnetude_results,true_results)
 
+############# top 5 factors ##### 
 
+#  [1] "X6"  "X5"  "X7"  "X4"  "X3" 
+# Lets top 5
+full_magnetude_data = data.frame(train[,"X3"],train[,"X4"],train[,"X5"],train[,"X6"],train[,"X7"])
 
-# logistic model after full pca
-full_pca_model = glm.fit <- glm(Y ~ F1, data = pcaData)
-full_pca_predict = predict(full_pca_model, newdata=test)
+full_magnetude_model = glm.fit <- glm(result ~ X6+X5+X7+X4+X3, data = train)
+full_magnetude_predict = predict(full_magnetude_model, newdata=test)
 
 # Comparing results
-naive_results <- ifelse(full_pca_predict > 0.5, 1, 0)
+full_magnetude_results <- ifelse(full_magnetude_predict > 0.5, 1, 0)
 true_results = test$result
 
 # results
-table(naive_results,true_results)
+table(full_magnetude_results,true_results)
 
 
+################## top 3 #############
 
+
+#  [1] "X6"  "X5"  "X7"  "X4"
+# Lets top 5
+formula = result ~ X6+X5+X7+X4
+full_magnetude_model = glm.fit <- glm(formula, data = train)
+full_magnetude_predict = predict(full_magnetude_model, newdata=test)
+
+# Comparing results
+full_magnetude_results <- ifelse(full_magnetude_predict > 0.5, 1, 0)
+true_results = test$result
+
+######### Niki selection #####
+
+getCor <- function(x){
+  a=cor.test(train[,1],train[,x])
+  return(c(est=a$estimate,pValue=a$p.value))
+}
+ind=2:length(train)
+corVector=sapply(ind,getCor)
+colnames(corVector)=mapply(paste,"X",ind-1,sep="")
+corVector     # Correlation tests
+X=as.matrix(train[,which(corVector[2,]<0.1)+1])
+
+
+formula = result ~ X9+X10+X18+X19
+full_magnetude_model = glm.fit <- glm(formula, data = train)
+full_magnetude_predict = predict(full_magnetude_model, newdata=test)
+
+# Comparing results
+full_magnetude_results <- ifelse(full_magnetude_predict > 0.5, 1, 0)
+true_results = test$result
 
 ################################### Selective PCA ###################
 
